@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Languages Spoken in the U.S></title>
+  <link rel="stylesheet" href="styles/main_charts.css">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/themes/avocado.js"></script>
+</head>
+
+<body>
+
+  <h1>Languages Spoken in the U.S.</h1>
+    <p>According to the U.S. Census Bureau, 13 percent of the U.S. population is foreign born. When individuals migrate to the U.S., it is common for them to retain the culture and traditions of their native countries. However, a closer look at the data reveals that as immigrant families become more established in the country, they stop using their native language. </p>
+
+  <div id="container1"></div>
+
+    <script>
+    Highcharts.chart('container1', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'World Region of Birth of Foreign Born'
+    },
+    subtitle: {
+        text: 'Source: U.S. Census Bureau, 2011-2015 American Community Survey 5-Year Estimates'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Region',
+        colorByPoint: true,
+        data: [{
+            name: 'Latin America',
+            y: 51.8
+        }, {
+            name: 'Asia',
+            y: 29.7
+        }, {
+            name: 'Europe',
+            y: 11.5
+        }, {
+            name: 'Africa',
+            y: 4.4
+        }, {
+            name: 'Northern America',
+            y: 2
+        }, {
+            name: 'Oceania',
+            y: 0.6
+        }]
+    }]
+});
+</script>
+
+  <div id="container2"></div>
+
+  <script>
+  Highcharts.chart('container2', {
+      chart: {
+          type: 'bar'
+      },
+      title: {
+          text: 'Language Spoken at Home'
+      },
+      subtitle: {
+          text: 'Source: U.S. Census Bureau, 2011-2015 American Community Survey 5-Year Estimates'
+      },
+      xAxis: {
+          categories: ['English', 'Spanish', 'Indo-European', 'Asian and Pacific Islander', 'Other'],
+          title: {
+              text: "Language"
+          }
+      },
+      yAxis: {
+          min: 0,
+          title: {
+              text: 'Percent',
+              align: 'high'
+          },
+          labels: {
+              overflow: 'justify'
+          }
+      },
+      tooltip: {
+          valueSuffix: ' percent'
+      },
+      plotOptions: {
+          bar: {
+              dataLabels: {
+                  enabled: true
+              }
+          }
+      },
+      legend: {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'top',
+          x: -40,
+          y: 300,
+          floating: true,
+          borderWidth: 1,
+          backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+          shadow: true
+      },
+      credits: {
+          enabled: false
+      },
+      series: [{
+          name: 'Spoken at home',
+          data: [79, 13, 3.7, 3.4, 1]
+      }]
+  });
+  </script>
+
+
+
+</body>
+</html>
