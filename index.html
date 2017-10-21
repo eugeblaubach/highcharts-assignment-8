@@ -5,16 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Languages Spoken in the U.S></title>
   <link rel="stylesheet" href="styles/main_charts.css">
+  <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Raleway" rel="stylesheet">
   <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/themes/avocado.js"></script>
+  <script src="https://code.highcharts.com/themes/sand-grid-light.js"></script>
 </head>
 
 <body>
 
+<header>
   <h1>Languages Spoken in the U.S.</h1>
-    <p>According to the U.S. Census Bureau, 13 percent of the U.S. population is foreign born. When individuals migrate to the U.S., it is common for them to retain the culture and traditions of their native countries. However, a closer look at the data reveals that as immigrant families become more established in the country, they stop using their native language. </p>
+  <p>By Eugenia Blaubach</p>
+</header>
+
+<section id="intro">
+
+    <p>According to the U.S. Census Bureau, 13 percent of the U.S. population is foreign born. While these individuals assimilate to American life, it is natural for them to retain the culture and traditions from their native countries. However, a closer look at the data reveals that as immigrant families become more established in the country, they stop using their native language. Does not imply a lack of fluency in English </p>
+
+    <p>According to the U.S. Census Bureau, 13 percent of the U.S. population is foreign born. While these individuals adapt to American life, it is natural for them to retain the culture and traditions of their native countries. However, a closer look at the data reveals that as immigrant families become more established in the country, they stop using their native language. Does not imply a lack of fluency in English </p>
+
+</section>
 
   <div id="container1"></div>
+
+<section id="caption1">
+  <p>Data taken from the <a href= "https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_15_5YR_DP02&src=pt">U.S. Census Bureau</a></p>
+</section>
 
     <script>
     Highcharts.chart('container1', {
@@ -74,6 +89,10 @@
 
   <div id="container2"></div>
 
+  <section id="caption2">
+    <p>Data taken from the <a href= "https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_15_5YR_DP02&src=pt">U.S. Census Bureau</a></p>
+  </section>
+
   <script>
   Highcharts.chart('container2', {
       chart: {
@@ -132,7 +151,9 @@
   });
   </script>
 
-
+  <footer>
+    <p>This page is an assignment for the University of Florida course </p>
+  </footer>
 
 </body>
 </html>
